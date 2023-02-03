@@ -5,21 +5,73 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	alert("ok");	
+	let numero1;
+	let numero2;
+	let resultado;
+
+	numero1 = txtIdNumeroUno.value
+	numero2 = txtIdNumeroDos.value
+
+	numero1 = parseInt(numero1);
+	numero2 = parseInt(numero2);
+	//resultado = parseInt(resultado);
+
+	resultado = numero1+numero2;
+
+	alert("La suma es: "+resultado);
 }
 
 function restar()
 {
+	let numero1;
+	let numero2;
+	let resultado;
+
+	numero1 = txtIdNumeroUno.value
+	numero2 = txtIdNumeroDos.value
+
+	numero1 = parseInt(numero1);
+	numero2 = parseInt(numero2);
+	resultado = parseInt(resultado);
+
+	resultado = numero1-numero2;
 	
+	alert("La resta es: "+resultado);
 }
 
 function multiplicar()
 { 
+	let numero1;
+	let numero2;
+	let resultado;
+
+	numero1 = txtIdNumeroUno.value
+	numero2 = txtIdNumeroDos.value
+
+	numero1 = parseInt(numero1);
+	numero2 = parseInt(numero2);
+	resultado = parseInt(resultado);
+
+	resultado = numero1*numero2;
 	
+	alert("La multiplicacion es: "+resultado);
 }
 
 function dividir()
 {
+	let numero1;
+	let numero2;
+	let resultado;
+
+	numero1 = txtIdNumeroUno.value
+	numero2 = txtIdNumeroDos.value
+
+	numero1 = parseInt(numero1);
+	numero2 = parseInt(numero2);
+	resultado = parseInt(resultado);
+
+	resultado = numero1/numero2;
 	
+	alert("La division es: "+resultado);
 }
 
