@@ -10,5 +10,72 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	let cantidadLamparas;
+    let marcaSeleccionada;  
+    let IBB;
+
+    IBB = parseFloat(IBB);
+
+    marcaSeleccionada = Marca.options[Marca.selectedIndex].text;
+
+    if (txtIdCantidad.value >= 6)
+    {
+
+        txtIdprecioDescuento.value = (35*txtIdCantidad.value)/2;
+        alert("6 o mas de cualquier marca son 50% OFF!");
+
+    } else if (txtIdCantidad.value == 5)
+        {
+            if (marcaSeleccionada == "ArgentinaLuz")
+            {
+                txtIdprecioDescuento.value = (35*txtIdCantidad.value) - (35*txtIdCantidad.value*0.4);
+                alert("5 de ArgentinaLuz son 40% OFF!");
+            } 
+            else
+            {
+                txtIdprecioDescuento.value = (35*txtIdCantidad.value) - (35*txtIdCantidad.value*0.3);
+                alert("5 de cualquier marca excepto ArgentinaLuz son 30% OFF!");
+            }
+    } else if (txtIdCantidad.value == 4)
+        {
+            if (marcaSeleccionada == "ArgentinaLuz" || marcaSeleccionada == "FelipeLamparas")
+            {
+                txtIdprecioDescuento.value = (35*txtIdCantidad.value) - (35*txtIdCantidad.value*0.25);
+                alert("4 de ArgentinaLuz o FelipeLamparas son 25% OFF!");
+            }
+            else
+            {
+                txtIdprecioDescuento.value = (35*txtIdCantidad.value) - (35*txtIdCantidad.value*0.2);
+                alert("4 de cualquiera menos ArgentinaLuz o FelipeLamparas son 20% OFF!");
+            }
+    } else if (txtIdCantidad.value == 3)
+        {
+            if (marcaSeleccionada == "ArgentinaLuz")
+            {
+                txtIdprecioDescuento.value = (35*txtIdCantidad.value) - (35*txtIdCantidad.value*0.15);
+                alert("3 de ArgentinaLuz son 15% OFF!");
+            }
+            else if (marcaSeleccionada == "FelipeLamparas")
+            {
+                txtIdprecioDescuento.value = (35*txtIdCantidad.value) - (35*txtIdCantidad.value*0.10);
+                alert("3 de FelipeLamparas son 10% OFF!");
+            }
+            else
+            {
+                txtIdprecioDescuento.value = (35*txtIdCantidad.value) - (35*txtIdCantidad.value*0.05);
+                alert("3 de cualquier marca menos ArgentinaLuz y FelipeLamparas son 5% OFF!");
+            }
+    } else if (txtIdCantidad.value < 3 )
+        {
+            txtIdprecioDescuento.value = 35*txtIdCantidad.value;
+        }
+
+    if (txtIdprecioDescuento.value >= 120)
+        {
+            txtIdprecioDescuento.value = parseFloat(txtIdprecioDescuento.value) + 35*parseFloat(txtIdCantidad.value)*0.1;
+
+
+            alert("IBB Usted pago $"+(35*txtIdCantidad.value*0.1));
+        }
+
 }

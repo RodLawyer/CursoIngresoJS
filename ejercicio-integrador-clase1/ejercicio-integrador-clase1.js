@@ -13,7 +13,7 @@ function mostrar()
     razonsocial = prompt("Ingrese razon social");
     nombre = prompt("Ingrese nombre");
 
-    aleatorio = Math.floor(Math.random()*10+1);
+    aleatorio = Math.floor(Math.random()*10);
 
     alert("Nombre del titular: "+nombre+"\n Razon social: "+razonsocial+"\n DNI: "+dni+"\n Fecha de inicio: "+fecha+"\n CUIT Empresa: 30-"+dni+"-"+aleatorio);
 
